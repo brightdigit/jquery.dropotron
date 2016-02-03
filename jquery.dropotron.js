@@ -1,6 +1,16 @@
 /* jquery.dropotron.js v1.4.3 | (c) n33 | n33.co | MIT licensed */
 
-(function($) {
+!function(root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        factory(require('jquery'));
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(this, (function($) {
 
 	// Disables selection.
 		$.fn.disableSelection_dropotron = function() { return $(this).css('user-select', 'none').css('-khtml-user-select', 'none').css('-moz-user-select', 'none').css('-o-user-select', 'none').css('-webkit-user-select', 'none'); }
@@ -583,4 +593,4 @@
 
 		};
 
-})(jQuery);
+});
