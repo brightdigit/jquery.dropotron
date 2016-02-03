@@ -10,7 +10,7 @@
         // Browser globals
         factory(jQuery);
     }
-}(this, (function($) {
+}(this, function($) {
 
 	// Disables selection.
 		$.fn.disableSelection_dropotron = function() { return $(this).css('user-select', 'none').css('-khtml-user-select', 'none').css('-moz-user-select', 'none').css('-o-user-select', 'none').css('-webkit-user-select', 'none'); }
